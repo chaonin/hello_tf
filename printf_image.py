@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 显示mnist图像
 import matplotlib.pyplot as plt
 from tensorflow.examples.tutorials.mnist import input_data
 import tensorflow as tf
@@ -15,8 +16,8 @@ def data_trainsform(a):    #将784转换成28*28的矩阵
             b[i][j] = a[28*i+j]
     return b
 
-tile = data_trainsform(mnist.train.images[1])
-print mnist.train.labels[1]
+tile = data_trainsform(mnist.train.images[2])
+print mnist.train.labels[2]
 plt.figure()
 plt.imshow(tile)
 plt.show()
